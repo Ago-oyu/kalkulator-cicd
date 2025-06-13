@@ -1,4 +1,15 @@
-const performCalculation = require('../script.js').performCalculation;
+function testPerformCalculation(expression) {
+    try {
+        const result = new Function('return ' + expression)();
+        if (isNaN(result) || !isFinite(result)) {
+            return 'Error';
+        }
+        return result;
+    } catch (error) {
+        return 'Error';
+    }
+}
+
 
 let testsPassed = 0;
 let testsFailed = 0;

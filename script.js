@@ -1,4 +1,4 @@
-const display = Document.getElementById('display');
+const display = document.getElementById('display');
 
 function appendToDisplay(value) {
     if (display.value === 'Error' || (display.value === '0' && value !== '.' && !isOperator(value))) {
